@@ -2,5 +2,10 @@
   .row
     .small-7.columns.small-centered
       = f.input_field :email,  as: :email, placeholder: 'someone@example.com'
+  .row
+    .small-6.columns.small-centered
       = f.submit 'Ve pillando sitio shurman', class: 'button tiny'
-           
+      = link_to 'Reenviar correo de confirmación', '#', class: 'button tiny alternative', id: 'resend_link'
+
+= simple_form_for :user, url: resend_confirmation_path, html: {id: 'resend_confirmation', class: 'hidden' }do |hidden|
+  = hidden.input_field :email,  as: :hidden, id: 'resend_email'

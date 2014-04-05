@@ -1,6 +1,5 @@
 class UserObserver < ActiveRecord::Observer
-  def after_save(user)
-  	debugger
-    UserMailer.send_confirmation(user).deliver
+  def after_create(user)
+    UserMailer.send_confirmation(user)
   end
 end

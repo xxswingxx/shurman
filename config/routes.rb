@@ -1,7 +1,9 @@
 ShurmanFoundation::Application.routes.draw do
+
   resources :users, only: [:new, :create]
   root to: 'users#new'
-  match '/users' => 'users#new', via:[:get, :post] 
+  post '/resend_confirmation' => 'users#resend_confirmation', as: :resend_confirmation
+  get '/confirm/:confirmation_token' => 'users#confirm', as: :confirm
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

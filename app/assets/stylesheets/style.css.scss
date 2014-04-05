@@ -1,3 +1,14 @@
 .header-bar {
   background-color: #333;
 }
+
+.alternative {
+  text-decoration: none;
+  &:visited {
+  	color: #fff;
+  }
+  background-color: #43ac6a;
+  &:hover {
+  	background-color: #008000;
+  }
+}
