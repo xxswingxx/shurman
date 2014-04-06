@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'unicorn-rails', group: [:develpment] # Use unicorn as the app server
 gem 'unicorn', group: [:production]
+gem 'rails_12factor', group: :production
 gem 'letter_opener', group: [:development]
 
 group :doc do
