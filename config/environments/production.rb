@@ -73,6 +73,8 @@ ShurmanFoundation::Application.configure do
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
     :domain => 'shurman.herokuapp.com', # your domain to identify your server when connecting
   }
+  config.action_mailer.default_url_options = { :host => 'http://shurman.herokuapp.com' }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
