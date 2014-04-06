@@ -6,6 +6,6 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :users, :confirmation_token, uniqueness: true
+    add_index :users, :confirmation_token, unique: true
   end
 end
