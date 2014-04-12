@@ -4,6 +4,7 @@ ShurmanFoundation::Application.routes.draw do
   root to: 'users#new'
   post '/resend_confirmation' => 'users#resend_confirmation', as: :resend_confirmation
   get '/confirm/:confirmation_token' => 'users#confirm', as: :confirm
+  match '/ping', to: 'scheduled_jobs#ping', via: [:get, :head]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
